@@ -7,7 +7,7 @@ var currentRoom = {};
 
 // Starting up a Socket.io server
 exports.listen = function (server) {
-  io = socket.listen(server);   // Start the Socket.io server, allowing it to piggyback on the existing HTTP server.
+  io = socketio.listen(server);   // Start the Socket.io server, allowing it to piggyback on the existing HTTP server.
   io.set('log level', 1);
   io.sockets.on('connection', function (socket) {   // Define how each user connetcion will be handled.
     guestNumber = assignGuestName(socket, guestNumber, nickNames, namesUsed);   // Assign user a guest name when they connect.

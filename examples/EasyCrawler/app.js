@@ -20,11 +20,12 @@ app.get('/', function (req, res, next) {
 
       let $ = cheerio.load(sres.text);
       var items = [];
-      $('#topic_list .topic_title').each(function (idx, element) {
+      $('#topic_list .cell').each(function (idx, element) {
         let $element = $(element);
         items.push({
-          title: $element.attr('title'),
-          href: $element.attr('href')
+          title: $element.find('.topic_title').attr('title'),
+          href: $element.find('.topic_title').attr('href'),
+          author: $element.find('.user_avatar img').attr('title'),
         });
       });
 

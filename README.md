@@ -8,3 +8,5 @@
   利用 express、utility 模块将 req.query 参数转换成 md5 值和 sha1 值输出
 - [EasyCrawler]('./examples/EasyCrawler')</br>
   利用 express、superagent、cheerio 模块简单爬取 http://cnodejs.org 的内容
+- [EasyCli]('./examples/EasyCli')</br>
+  利用 commander、os 模块制作的命令行工具，能够输出当前的日期和时间以及显示本机 IP 地址
